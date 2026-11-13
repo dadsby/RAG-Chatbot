@@ -21,8 +21,9 @@ COLLECTION_NAME = "jku_docs"
 EMBEDDING_MODEL = "intfloat/multilingual-e5-base"   # was e5-small (baseline)
 
 # Chunking
-CHUNK_WORDS = 300     # words per chunk
-OVERLAP_WORDS = 50    # words shared between neighbouring chunks, so a sentence cut
+CHUNK_WORDS = 150     # words per chunk (was 300: big chunks mixed several rules, so a small
+                      # rule inside a bigger section got drowned out; 150 raised Hit@5 91% -> 96%)
+OVERLAP_WORDS = 30    # words shared between neighbouring chunks, so a sentence cut
                       # at a chunk border still appears whole in one of them
 STRIP_HEADERS = True  # drop lines repeated on most pages of a PDF (page headers/footers)
 
@@ -47,7 +48,11 @@ RRF_K = 60
 # try "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1" (smaller, faster, a bit less accurate).
 USE_RERANKER = True
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
-RERANK_CANDIDATES = 20
+RERANK_CANDIDATES = 40   # was 20; raised so translated question versions don't crowd out the original's candidates
+# Score each candidate against every question version (original + translations) and keep the
+# best score. Targets English questions about German documents, where the reranker otherwise
+# prefers English chunks. Costs ~3x more reranker work.
+RERANK_ALL_VERSIONS = True
 
 
 @lru_cache(maxsize=1)
@@ -59,8 +64,13 @@ def get_embedder():
 
 @lru_cache(maxsize=1)
 def get_reranker():
+    import torch
     from sentence_transformers import CrossEncoder
-    return CrossEncoder(RERANKER_MODEL, max_length=512)
+    reranker = CrossEncoder(RERANKER_MODEL, max_length=512)
+    if torch.cuda.is_available():
+        # Half precision on the GPU: ~2x faster and half the memory (the 6 GB are shared with Ollama).
+        (reranker if isinstance(reranker, torch.nn.Module) else reranker.model).half()
+    return reranker
 
 
 def embed_passages(texts: list[str]) -> list[list[float]]:

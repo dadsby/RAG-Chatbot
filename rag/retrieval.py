@@ -103,10 +103,14 @@ def rrf(ranked_lists: list[list[tuple[str, float]]], k: int = config.RRF_K) -> l
     return sorted(fused.items(), key=lambda x: x[1], reverse=True)
 
 
-def rerank(question: str, candidates: list[str]) -> list[tuple[str, float]]:
+def rerank(questions: list[str], candidates: list[str]) -> list[tuple[str, float]]:
+    """Score every candidate against every question version; a chunk keeps its best score."""
     chunks = corpus()["chunks"]
-    scores = get_reranker().predict([(question, chunks[cid]["text"]) for cid in candidates])
-    return sorted(zip(candidates, map(float, scores)), key=lambda x: x[1], reverse=True)
+    pairs = [(q, chunks[cid]["text"]) for q in questions for cid in candidates]
+    scores = get_reranker().predict(pairs)
+    best = {cid: max(float(scores[qi * len(candidates) + ci]) for qi in range(len(questions)))
+            for ci, cid in enumerate(candidates)}
+    return sorted(best.items(), key=lambda x: x[1], reverse=True)
 
 
 # ---------------------------------------------------------------- full pipeline
@@ -137,7 +141,8 @@ def retrieve(question: str, k: int = config.TOP_K, *, translate: bool | None = N
     ranked = lists[0] if len(lists) == 1 else rrf(lists)
 
     if use_reranker:
-        ranked = rerank(question, [cid for cid, _ in ranked[:config.RERANK_CANDIDATES]])
+        rerank_queries = versions if config.RERANK_ALL_VERSIONS else [question]
+        ranked = rerank(rerank_queries, [cid for cid, _ in ranked[:config.RERANK_CANDIDATES]])
 
     chunks = corpus()["chunks"]
     return [{**chunks[cid], "score": score} for cid, score in ranked[:k]]
