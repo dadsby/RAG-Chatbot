@@ -13,42 +13,76 @@ import time
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from rag.config import ROOT, TOP_K, embed_query, get_collection
+from rag.config import QUERY_TRANSLATION, ROOT, TOP_K, embed_query, get_collection, get_embedder
 
 NO_ANSWER = "The documents don't contain an answer to this question."
 
 SYSTEM_PROMPT = f"""You answer questions about university documents.
 
 Rules:
-- Use ONLY the numbered context passages below. Never use outside knowledge.
-- After each statement, cite its source in the form [file, p. X].
+- Use ONLY the context passages below. Never use outside knowledge.
+- After each statement, cite its source by copying the tag shown above that passage
+  exactly, e.g. [satzung_studienrecht_2026.pdf, p. 29]. Never cite passage numbers.
 - If the passages don't contain the answer, reply with exactly: "{NO_ANSWER}"
   (translated into the question's language if needed) and nothing else.
 - Answer in the same language as the question. Keep it short and precise."""
 
 
-def retrieve(question: str, k: int = TOP_K) -> list[dict]:
-    result = get_collection().query(
-        query_embeddings=[embed_query(question)],
-        n_results=k,
-        include=["documents", "metadatas", "distances"],
+TRANSLATE_PROMPT = """Translate the user's question into German and into English.
+Reply with exactly two lines: line 1 the German version, line 2 the English version.
+No numbering, no quotes, no other text."""
+
+
+def get_client() -> OpenAI:
+    return OpenAI(base_url=os.environ["LLM_BASE_URL"], api_key=os.environ["LLM_API_KEY"])
+
+
+def translate_query(question: str) -> list[str]:
+    """Return the question in German and English (best effort; [] if the reply is odd)."""
+    response = get_client().chat.completions.create(
+        model=os.environ["LLM_MODEL"],
+        temperature=0,
+        messages=[{"role": "system", "content": TRANSLATE_PROMPT},
+                  {"role": "user", "content": question}],
     )
-    hits = []
-    for text, meta, dist in zip(result["documents"][0], result["metadatas"][0], result["distances"][0]):
-        hits.append({"text": text, "source": meta["source"], "page": meta["page"],
-                     "similarity": 1 - dist})  # cosine distance -> similarity
-    return hits
+    lines = [l.strip() for l in response.choices[0].message.content.splitlines() if l.strip()]
+    return lines[:2]
+
+
+def retrieve(question: str, k: int = TOP_K) -> list[dict]:
+    """Search with the original question (plus German/English versions if enabled).
+
+    Each version returns its own top k. A chunk found by several versions keeps its
+    best score, then the overall top k are returned.
+    """
+    queries = [question]
+    if QUERY_TRANSLATION:
+        queries += [q for q in translate_query(question) if q.lower() != question.lower()]
+
+    best: dict[str, dict] = {}
+    for query in queries:
+        result = get_collection().query(
+            query_embeddings=[embed_query(query)],
+            n_results=k,
+            include=["documents", "metadatas", "distances"],
+        )
+        for cid, text, meta, dist in zip(result["ids"][0], result["documents"][0],
+                                         result["metadatas"][0], result["distances"][0]):
+            sim = 1 - dist  # cosine distance -> similarity
+            if cid not in best or sim > best[cid]["similarity"]:
+                best[cid] = {"text": text, "source": meta["source"], "page": meta["page"],
+                             "similarity": sim, "query": query}
+    return sorted(best.values(), key=lambda h: h["similarity"], reverse=True)[:k]
 
 
 def build_context(hits: list[dict]) -> str:
     return "\n\n".join(
-        f"[{i}] ({h['source']}, p. {h['page']})\n{h['text']}" for i, h in enumerate(hits, start=1)
+        f"Source: [{h['source']}, p. {h['page']}]\n{h['text']}" for h in hits
     )
 
 
 def generate(question: str, context: str) -> tuple[str, object]:
-    client = OpenAI(base_url=os.environ["LLM_BASE_URL"], api_key=os.environ["LLM_API_KEY"])
-    response = client.chat.completions.create(
+    response = get_client().chat.completions.create(
         model=os.environ["LLM_MODEL"],
         temperature=0,  # same question -> (nearly) same answer; easier to evaluate
         messages=[
@@ -80,6 +114,7 @@ def answer(question: str, show_context: bool = False) -> None:
 
 def main() -> None:
     load_dotenv(ROOT / ".env")
+    get_embedder()  # load the embedding model once up front, so it isn't counted as retrieval time
     parser = argparse.ArgumentParser()
     parser.add_argument("question", nargs="?", help="leave out for interactive mode")
     parser.add_argument("--show-context", action="store_true")

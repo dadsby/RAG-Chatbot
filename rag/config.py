@@ -18,7 +18,7 @@ COLLECTION_NAME = "jku_docs"
 # E5 models expect the prefixes "passage: " for documents and "query: " for questions.
 # It reads at most 512 tokens per chunk, which is why chunks are ~300 words, not 500:
 # German words often split into 2+ tokens, and anything past 512 would be cut off silently.
-EMBEDDING_MODEL = "intfloat/multilingual-e5-small"
+EMBEDDING_MODEL = "intfloat/multilingual-e5-base"   # was e5-small (baseline)
 
 # Chunking
 CHUNK_WORDS = 300     # words per chunk
@@ -27,6 +27,11 @@ OVERLAP_WORDS = 50    # words shared between neighbouring chunks, so a sentence 
 
 # Retrieval
 TOP_K = 5             # how many chunks to give the LLM
+
+# Query translation: before searching, let the LLM rewrite the question in German AND
+# English, then search with all versions and merge. Targets the finding that English
+# questions miss German documents. Costs one extra (short) LLM call per question.
+QUERY_TRANSLATION = True
 
 
 @lru_cache(maxsize=1)
