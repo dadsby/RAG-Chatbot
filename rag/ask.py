@@ -8,6 +8,7 @@ Run from the project root:
 
 import argparse
 import os
+import re
 import time
 
 from dotenv import load_dotenv
@@ -46,6 +47,9 @@ def translate_query(question: str) -> list[str]:
                   {"role": "user", "content": question}],
     )
     lines = [l.strip() for l in response.choices[0].message.content.splitlines() if l.strip()]
+    if len(lines) == 1:
+        # Small models sometimes put both versions on one line: "Wie ...? How ...?"
+        lines = [part.strip() for part in re.split(r"(?<=\?)\s+", lines[0]) if part.strip()]
     return lines[:2]
 
 
