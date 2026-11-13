@@ -1,0 +1,338 @@
+{
+ "Wie oft darf ich eine negativ beurteilte Prüfung wiederholen?": [
+  "Wie oft darf ich eine negativ beurteilte Prüfung wiederholen?",
+  "How often am I allowed to retake a negatively graded exam?"
+ ],
+ "How many times can I retake a failed exam?": [
+  "How many times can I retake a failed exam?",
+  "Wie oft kann ich einen gescheiterten Prüfungsversuch wiederholen?"
+ ],
+ "Darf ich eine positive Prüfung wiederholen, um die Note zu verbessern?": [
+  "Darf ich eine positive Prüfung wiederholen, um die Note zu verbessern?",
+  "May I retake a positive exam to improve my grade?"
+ ],
+ "Can I retake an exam I already passed to improve my grade?": [
+  "Can I retake an exam I already passed to improve my grade?",
+  "Darf ich ein already passedes Prüfungsdatum wiederholen, um meine Note zu verbessern?",
+  "May I retake an already passed exam to improve my grade?"
+ ],
+ "Was passiert, wenn ich eine Prüfung ohne wichtigen Grund abbreche?": [
+  "Was passiert, wenn ich eine Prüfung ohne wichtigen Grund abbreche?",
+  "What happens if I cancel an exam without a valid reason?"
+ ],
+ "What happens if I don't show up to an exam and didn't deregister?": [
+  "What happens if I don't show up to an exam and didn't deregister?",
+  "Was passiert, wenn ich mich für eine Prüfung nicht eintrifft und mich nicht ausgemeldet habe?",
+  "What happens if I don't show up for an exam and didn't deregister?"
+ ],
+ "Wie lange hat der Prüfer Zeit, meine Prüfung zu beurteilen?": [
+  "Wie lange hat der Prüfer Zeit, meine Prüfung zu beurteilen?",
+  "How long does the examiner have to evaluate my exam?"
+ ],
+ "How long does my supervisor have to grade my master's thesis?": [
+  "How long does my supervisor have to grade my master's thesis?",
+  "Wie lange hat meine Betreuerin/betreuer zu meinem Master-Arbeit zu gradeen?"
+ ],
+ "In welcher Zeit soll eine Masterarbeit bearbeitbar sein?": [
+  "In welcher Zeit soll eine Masterarbeit bearbeitbar sein?",
+  "How long should a master's thesis be manageable?"
+ ],
+ "How many hours of work does one ECTS credit correspond to?": [
+  "How many hours of work does one ECTS credit correspond to?",
+  "Wie viele Stunden Arbeit entspricht ein ECTS-Kredit?"
+ ],
+ "Wie viele ECTS-Punkte umfasst ein Bachelorstudium?": [
+  "Wie viele ECTS-Punkte umfasst ein Bachelorstudium?",
+  "How many ECTS points does a Bachelor's degree entail?"
+ ],
+ "In which months are exam dates offered in the winter semester?": [
+  "In which months are exam dates offered in the winter semester?",
+  "In welchen Monaten werden Prüfungstermine im Wintersemester angeboten?"
+ ],
+ "Wie lange muss die Anmeldefrist für Prüfungen mindestens sein?": [
+  "Wie lange muss die Anmeldefrist für Prüfungen mindestens sein?",
+  "How long must the registration deadline for exams minimally be?"
+ ],
+ "For how long can I take a leave of absence because of a job or exceptional circumstances?": [
+  "For how long can I take a leave of absence because of a job or exceptional circumstances?",
+  "Wie lange kann ich aufgrund eines Jobs oder außergewöhnlicher Umstände Urlaub machen?"
+ ],
+ "Darf eine Lehrveranstaltung auf Englisch abgehalten werden, wenn das Curriculum das nicht vorsieht?": [
+  "Darf eine Lehrveranstaltung auf Englisch abgehalten werden, wenn das Curriculum das nicht vorsieht?",
+  "May a lecture be conducted in English if the curriculum does not provide for this?"
+ ],
+ "How long is one teaching unit and how many weeks does a semester have?": [
+  "How long is one teaching unit and how many weeks does a semester have?",
+  "Wie lange ist ein Unterrichtszeitabschnitt und wie viele Wochen hat ein Semester?"
+ ],
+ "Wie wird die Vorrangzahl bei der LVA-Zuteilung berechnet?": [
+  "Wie wird die Vorrangzahl bei der LVA-Zuteilung berechnet?",
+  "Wie wird die Prioritizrangnummer bei der Zuteilung an die LVA berechnet?",
+  "How is the priority number calculated for LVA allocation?"
+ ],
+ "How is the priority number for course allocation calculated?": [
+  "How is the priority number for course allocation calculated?",
+  "Wie wird die Prioritätsnummer für den Kurszuweisungsprozess berechnet?"
+ ],
+ "Bis wann muss ich mich von einer Lehrveranstaltung abmelden?": [
+  "Bis wann muss ich mich von einer Lehrveranstaltung abmelden?",
+  "When until do I need to unsubscribe from a lecture?"
+ ],
+ "Until when can I deregister from a course without being ranked lower later?": [
+  "Until when can I deregister from a course without being ranked lower later?",
+  "Bis wann kann ich mich ohne Notensanktion später von einem Kurs abmelden?",
+  "Until when can I drop a course without being ranked lower later?"
+ ],
+ "How long is the main course registration period?": [
+  "How long is the main course registration period?",
+  "Wie lange dauert der Hauptkurs-Anmeldezeitraum?"
+ ],
+ "Was passiert mit meinem Wartebonus, wenn ich eine Lehrveranstaltung ohne wichtigen Grund abbreche?": [
+  "Was passiert mit meinem Wartebonus, wenn ich eine Lehrveranstaltung ohne wichtigen Grund abbreche?",
+  "What happens to my waiting bonus if I cancel a lecture without an important reason?"
+ ],
+ "Darf ich meinen Hund mit auf den Campus nehmen?": [
+  "Darf ich meinen Hund mit auf den Campus nehmen?",
+  "May I bring my dog to the campus?"
+ ],
+ "Can I bring my dog to campus?": [
+  "Can I bring my dog to campus?",
+  "Kann ich meinen Hund auf dem Campus mitbringen?"
+ ],
+ "What are the opening hours of the university buildings?": [
+  "What are the opening hours of the university buildings?",
+  "Welche Öffnungszeiten haben die Universitätsgebäude?"
+ ],
+ "Wo darf ich an der JKU Plakate aufhängen?": [
+  "Wo darf ich an der JKU Plakate aufhängen?",
+  "Where may I hang up posters at the JKU?"
+ ],
+ "Darf ich am Campus rauchen?": [
+  "Darf ich am Campus rauchen?",
+  "May I smoke on the campus?"
+ ],
+ "Was kostet das Parkticket für Studierende?": [
+  "Was kostet das Parkticket für Studierende?",
+  "Wie viel kostet das Parkticket für Studierende?",
+  "How much does the parking ticket cost for students?"
+ ],
+ "How much does student parking cost per semester?": [
+  "How much does student parking cost per semester?",
+  "Wie viel kostet das Studentenparken pro Semester?"
+ ],
+ "How much is a day ticket for parking at JKU?": [
+  "How much is a day ticket for parking at JKU?",
+  "Wie viel kostet ein Tageskennel für den Parken am JKU?",
+  "How much does a day ticket for parking at JKU cost?"
+ ],
+ "Darf ich im Parkhaus mit dem Fahrrad fahren?": [
+  "Darf ich im Parkhaus mit dem Fahrrad fahren?",
+  "Am I allowed to ride a bicycle in the parking garage?"
+ ],
+ "How long is video footage from the parking areas stored?": [
+  "How long is video footage from the parking areas stored?",
+  "Wie lange wird die Videoaufzeichnung aus den Parkflächen gespeichert?",
+  "How long is the video footage from the parking areas stored?"
+ ],
+ "Was passiert, wenn mein Auto zwei Parkplätze belegt?": [
+  "Was passiert, wenn mein Auto zwei Parkplätze belegt?",
+  "What happens if my car occupies two parking spaces?"
+ ],
+ "Who do I contact if I damage something in the parking area?": [
+  "Who do I contact if I damage something in the parking area?",
+  "Wen kontaktiere ich, wenn ich etwas im Parkhaus beschädige?"
+ ],
+ "Wie lange darf ich ein Buch aus der Bibliothek ausleihen?": [
+  "Wie lange darf ich ein Buch aus der Bibliothek ausleihen?",
+  "How long can I borrow a book from the library?"
+ ],
+ "How long can I borrow a library book?": [
+  "How long can I borrow a library book?",
+  "Wie lange kann ich ein Bibliotheksbuch ausleihen?"
+ ],
+ "How much do I pay if I return a library book late?": [
+  "How much do I pay if I return a library book late?",
+  "Wie viel muss ich bezahlen, wenn ich ein Bibliotheksbuch spät zurückgebe?"
+ ],
+ "Muss ich einen Ausweis mitnehmen, wenn ich in die Bibliothek gehe?": [
+  "Muss ich einen Ausweis mitnehmen, wenn ich in die Bibliothek gehe?",
+  "Do I need to bring a ID when I go to the library?"
+ ],
+ "Darf ich in Büchern der Bibliothek etwas unterstreichen?": [
+  "Darf ich in Büchern der Bibliothek etwas unterstreichen?",
+  "May I underline something in the books from the library?"
+ ],
+ "Can I play games on the library computers?": [
+  "Can I play games on the library computers?",
+  "Darf ich Spiele auf den Rechnern der Bibliothek spielen?",
+  "May I play games on the library computers?"
+ ],
+ "Wie melde ich mich im KUSSS von einer Prüfung ab?": [
+  "Wie melde ich mich im KUSSS von einer Prüfung ab?",
+  "How do I deregister from an exam in KUSSS?"
+ ],
+ "I'm not listed as a participant of a course. How can I register for its exam in KUSSS?": [
+  "I'm not listed as a participant of a course. How can I register for its exam in KUSSS?",
+  "Ich bin nicht als Teilnehmer im Kurs eingetragen. Wie kann ich mich für den Prüfungsversuch in KUSSS anmelden?",
+  "I am not listed as a participant in the course. How can I register for its exam in KUSSS?"
+ ],
+ "Wann bekomme ich wegen einer Terminüberschneidung keinen LVA-Platz?": [
+  "Wann bekomme ich wegen einer Terminüberschneidung keinen LVA-Platz?",
+  "Wann bekomm ich wegen einer Terminüberschneidung keinen LVA-Platz?",
+  "When will I not get an LVA place due to a scheduling conflict?"
+ ],
+ "Does the KUSSS prerequisite check include the StEOP?": [
+  "Does the KUSSS prerequisite check include the StEOP?",
+  "Inklusion des StEOP in der KUSSS-Voraussetzungsprüfung?"
+ ],
+ "Which semester is an exam assigned to in KUSSS if it takes place in a later semester?": [
+  "Which semester is an exam assigned to in KUSSS if it takes place in a later semester?",
+  "Welcher Semester wird eine Prüfung in KUSSS zugewiesen, wenn sie in einem späteren Semester stattfindet?"
+ ],
+ "What is the StEOP and how do I complete it?": [
+  "What is the StEOP and how do I complete it?",
+  "Was ist der StEOP und wie fülle ich ihn aus?"
+ ],
+ "Wie viele ECTS muss ich für die StEOP im AI-Bachelor sammeln?": [
+  "Wie viele ECTS muss ich für die StEOP im AI-Bachelor sammeln?",
+  "Wie viele ECTS Punkte muss ich für die StEOP im AI-Bachelor sammeln?",
+  "How many ECTS credits do I need to collect for the StEOP in the AI-Bachelor program?"
+ ],
+ "How many ECTS of free electives do I need in the AI bachelor, and where can I take them?": [
+  "How many ECTS of free electives do I need in the AI bachelor, and where can I take them?",
+  "Wie viele ECTS an frei wählbaren Modulen benötige ich im Bachelor AI und wo kann ich sie absolvieren?"
+ ],
+ "How do I find a topic for my bachelor thesis?": [
+  "How do I find a topic for my bachelor thesis?",
+  "Wie finde ich ein Thema für meine Bachelor-Arbeit?"
+ ],
+ "How do I sign up for the AI mentoring program?": [
+  "How do I sign up for the AI mentoring program?",
+  "Wie melde ich mich an der AI Mentoring-Programm an?"
+ ],
+ "Wie melde ich mich für das AI-Mentoring an?": [
+  "Wie melde ich mich für das AI-Mentoring an?",
+  "How do I sign up for the AI mentoring?"
+ ],
+ "How much does a replacement JKU Card cost?": [
+  "How much does a replacement JKU Card cost?",
+  "Wie viel kostet die Erneuerung der JKU-Karte?"
+ ],
+ "When is course registration for the winter semester 2026/27?": [
+  "When is course registration for the winter semester 2026/27?",
+  "Wann beginnt die Anmeldezeit für den Wintersemester 2026/27?"
+ ],
+ "Wann sind die Weihnachtsferien im Wintersemester 2026/27?": [
+  "Wann sind die Weihnachtsferien im Wintersemester 2026/27?",
+  "When are the Christmas holidays in the winter semester 2026/27?"
+ ],
+ "Should I start the AI bachelor in the summer semester?": [
+  "Should I start the AI bachelor in the summer semester?",
+  "Sollte ich den Bachelor in Künstliche Intelligenz im Sommersemester beginnen?",
+  "Should I start the AI bachelor's program in the summer semester?"
+ ],
+ "Can I study AI at JKU via distance learning?": [
+  "Can I study AI at JKU via distance learning?",
+  "Kann ich AI an der JKU über Fernstudium studieren?"
+ ],
+ "Wo ist das TNF-Kammerl?": [
+  "Wo ist das TNF-Kammerl?",
+  "Where is the TNF-Kammerl?"
+ ],
+ "When and where does the AI Cafe take place?": [
+  "When and where does the AI Cafe take place?",
+  "Wann und wo findet das AI Cafe statt?"
+ ],
+ "When do USI sports courses start in the winter semester?": [
+  "When do USI sports courses start in the winter semester?",
+  "Wann beginnen die USI-Sportkurse im Wintersemester?"
+ ],
+ "How long is the AI master's program?": [
+  "How long is the AI master's program?",
+  "Wie lange dauert das AI-Studium?"
+ ],
+ "How long is the AI master's and what language is it taught in?": [
+  "How long is the AI master's and what language is it taught in?",
+  "Wie lange ist der AI-Master und in welcher Sprache wird er unterrichtet?",
+  "How long is the AI master's program and in which language is it taught?"
+ ],
+ "Welches Englischniveau brauche ich für den AI-Master?": [
+  "Welches Englischniveau brauche ich für den AI-Master?",
+  "Welches Englischniveau benötige ich für den AI-Master?",
+  "What English level do I need for the AI Master's program?"
+ ],
+ "Wo finde ich meine verlorene JKU Card?": [
+  "Wo finde ich meine verlorene JKU Card?",
+  "Where can I find my lost JKU Card?"
+ ],
+ "When am I allowed to take master's courses during my bachelor?": [
+  "When am I allowed to take master's courses during my bachelor?",
+  "Wann darf ich Master-Kurse während meines Bachelor-Studiums belegen?"
+ ],
+ "Wie wird die Gesamtnote eines Fachs im Bachelorzeugnis berechnet?": [
+  "Wie wird die Gesamtnote eines Fachs im Bachelorzeugnis berechnet?",
+  "How is the overall grade of a subject calculated in the bachelor transcript?"
+ ],
+ "Bietet die ÖH einen Plagiatscheck an?": [
+  "Bietet die ÖH einen Plagiatscheck an?",
+  "Does the ÖH offer a plagiarism check?"
+ ],
+ "How do I get access to the 24-hour study zone?": [
+  "How do I get access to the 24-hour study zone?",
+  "Wie komme ich auf den 24-Stunden-Lernbereich?"
+ ],
+ "Wie viele Semester dauert das Bachelorstudium Informatik?": [
+  "Wie viele Semester dauert das Bachelorstudium Informatik?",
+  "How long does the Bachelor's degree in Computer Science last in semesters?"
+ ],
+ "How many ECTS is one semester hour (Sst) in the computer science bachelor?": [
+  "How many ECTS is one semester hour (Sst) in the computer science bachelor?",
+  "Wie viele ECTS ist eine Semesterstunde (Sst) im Informatik-Bachelor?",
+  "How many ECTS is one semester hour (Sst) in the computer science bachelor's program?"
+ ],
+ "In welcher Lehrveranstaltung schreibt man die Bachelorarbeit in Informatik?": [
+  "In welcher Lehrveranstaltung schreibt man die Bachelorarbeit in Informatik?",
+  "In which lecture do you write your bachelor's thesis in computer science?"
+ ],
+ "Who won the Champions League in 2026?": [
+  "Who won the Champions League in 2026?",
+  "Wer gewann den Champions League im Jahr 2026?"
+ ],
+ "Wie lautet das WLAN-Passwort der JKU?": [
+  "Wie lautet das WLAN-Passwort der JKU?",
+  "Welches WLAN-Passwort wird an der JKU verwendet?",
+  "What is the WLAN password at JKU?"
+ ],
+ "What is the JKU WiFi password?": [
+  "What is the JKU WiFi password?",
+  "Was ist das JKU WLAN-Passwort?"
+ ],
+ "Was gibt es heute in der Mensa zu essen?": [
+  "Was gibt es heute in der Mensa zu essen?",
+  "What can be eaten in the canteen today?"
+ ],
+ "How much does a room in a student dorm cost per month?": [
+  "How much does a room in a student dorm cost per month?",
+  "Wie viel kostet ein Zimmer in einer Studentenwohnburg im Monat?"
+ ],
+ "Welche Stipendien kann ich an der JKU beantragen?": [
+  "Welche Stipendien kann ich an der JKU beantragen?",
+  "Which scholarships can I apply for at the JKU?"
+ ],
+ "How do I apply for an Erasmus semester abroad?": [
+  "How do I apply for an Erasmus semester abroad?",
+  "Wie bewerbe ich mich für ein Erasmus-Semester außerhalb des Landes?"
+ ],
+ "Wie hoch ist der ÖH-Beitrag in Euro?": [
+  "Wie hoch ist der ÖH-Beitrag in Euro?",
+  "How high is the ÖH-contribution in Euros?"
+ ],
+ "What will the weather be like in Linz tomorrow?": [
+  "What will the weather be like in Linz tomorrow?",
+  "Wie wird das Wetter in Linz morgen aussehen?"
+ ],
+ "Wie viel verdient ein Professor an der JKU?": [
+  "Wie viel verdient ein Professor an der JKU?",
+  "How much does a professor earn at the JKU?"
+ ]
+}

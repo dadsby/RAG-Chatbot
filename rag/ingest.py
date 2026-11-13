@@ -11,7 +11,9 @@ import time
 
 import pymupdf
 
-from rag.config import CHUNK_WORDS, OVERLAP_WORDS, RAW_DIR, embed_passages, get_collection
+from collections import Counter
+
+from rag.config import CHUNK_WORDS, OVERLAP_WORDS, RAW_DIR, STRIP_HEADERS, embed_passages, get_collection
 
 
 def clean(text: str) -> str:
@@ -34,6 +36,26 @@ def chunk_words(text: str, size: int = CHUNK_WORDS, overlap: int = OVERLAP_WORDS
     return chunks
 
 
+def _line_key(line: str) -> str:
+    """Normalise a line so 'Seite 28 von 54' and 'Seite 29 von 54' count as the same line."""
+    return re.sub(r"\d+", "#", line.strip().lower())
+
+
+def repeated_lines(pages: list[str]) -> set[str]:
+    """Lines that appear on at least half of the pages (min. 3) = headers/footers/page numbers."""
+    if len(pages) < 3:
+        return set()
+    counts = Counter()
+    for text in pages:
+        counts.update({_line_key(l) for l in text.splitlines() if l.strip()})
+    threshold = max(3, len(pages) / 2)
+    return {key for key, n in counts.items() if n >= threshold}
+
+
+def strip_lines(text: str, drop: set[str]) -> str:
+    return "\n".join(l for l in text.splitlines() if _line_key(l) not in drop)
+
+
 def load_chunks():
     """Yield (id, text, metadata) for every chunk of every PDF.
 
@@ -43,11 +65,13 @@ def load_chunks():
     """
     for pdf_path in sorted(RAW_DIR.glob("*.pdf")):
         with pymupdf.open(pdf_path) as doc:
-            for page_number, page in enumerate(doc, start=1):
-                text = clean(page.get_text())
-                for i, chunk in enumerate(chunk_words(text)):
-                    chunk_id = f"{pdf_path.name}:p{page_number}:c{i}"
-                    yield chunk_id, chunk, {"source": pdf_path.name, "page": page_number}
+            pages = [page.get_text() for page in doc]
+        drop = repeated_lines(pages) if STRIP_HEADERS else set()
+        for page_number, raw in enumerate(pages, start=1):
+            text = clean(strip_lines(raw, drop))
+            for i, chunk in enumerate(chunk_words(text)):
+                chunk_id = f"{pdf_path.name}:p{page_number}:c{i}"
+                yield chunk_id, chunk, {"source": pdf_path.name, "page": page_number}
 
 
 def main() -> None:

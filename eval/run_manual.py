@@ -13,7 +13,8 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 from rag.ask import build_context, generate, retrieve
-from rag.config import EMBEDDING_MODEL, QUERY_TRANSLATION, ROOT, get_embedder
+from rag import config
+from rag.config import ROOT, get_embedder
 
 QUESTIONS = [
     # German
@@ -52,7 +53,8 @@ def main() -> None:
     out_file = out_dir / f"manual_{datetime.now():%Y-%m-%d_%H-%M}.md"
 
     lines = [f"# Manual run {datetime.now():%Y-%m-%d %H:%M}\n",
-             f"Embedding model: {EMBEDDING_MODEL} | query translation: {QUERY_TRANSLATION}\n"]
+             f"Embedding: {config.EMBEDDING_MODEL} | translation: {config.QUERY_TRANSLATION} | "
+             f"hybrid: {config.HYBRID_SEARCH} | reranker: {config.RERANKER_MODEL if config.USE_RERANKER else 'off'}\n"]
     for qid, question in QUESTIONS:
         print(f"[{qid}] {question}")
         t0 = time.perf_counter()
@@ -65,8 +67,7 @@ def main() -> None:
         lines.append(answer + "\n")
         lines.append("Retrieved:")
         for h in hits:
-            found_by = f"  (via: {h['query']})" if h.get("query") and h["query"] != question else ""
-            lines.append(f"- {h['similarity']:.3f}  {h['source']}, p. {h['page']}{found_by}")
+            lines.append(f"- {h['score']:.3f}  {h['source']}, p. {h['page']}")
         tokens = f", {usage.prompt_tokens} in / {usage.completion_tokens} out tokens" if usage else ""
         lines.append(f"\nTime: retrieval {1000 * (t1 - t0):.0f} ms, LLM {1000 * (t2 - t1):.0f} ms{tokens}\n")
 

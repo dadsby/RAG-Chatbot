@@ -1,0 +1,1062 @@
+[
+ {
+  "id": "S1",
+  "question": "Wie oft darf ich eine negativ beurteilte Prüfung wiederholen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    29
+   ]
+  },
+  "expected_answer": "4 Mal; StEOP-Prüfungen nur 3 Mal; letzte Prüfung des Studiums 1 weiteres Mal"
+ },
+ {
+  "id": "S2",
+  "question": "How many times can I retake a failed exam?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    29
+   ],
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    16
+   ]
+  },
+  "expected_answer": "4 retakes (5 attempts); StEOP 3 retakes (4 attempts)"
+ },
+ {
+  "id": "S3",
+  "question": "Darf ich eine positive Prüfung wiederholen, um die Note zu verbessern?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    28,
+    29
+   ],
+   "kusss_voraussetzungspruefung.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "Ja, einmal innerhalb der gesetzlichen Frist (6 Monate laut KUSSS); alte Note wird nichtig"
+ },
+ {
+  "id": "S4",
+  "question": "Can I retake an exam I already passed to improve my grade?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    28,
+    29
+   ],
+   "kusss_voraussetzungspruefung.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "Yes, once, within the legal deadline (6 months per KUSSS sheet); old grade becomes void"
+ },
+ {
+  "id": "S5",
+  "question": "Was passiert, wenn ich eine Prüfung ohne wichtigen Grund abbreche?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    28
+   ]
+  },
+  "expected_answer": "Prüfung wird negativ beurteilt; Antrag auf wichtigen Grund binnen zwei Wochen"
+ },
+ {
+  "id": "S6",
+  "question": "What happens if I don't show up to an exam and didn't deregister?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    25
+   ]
+  },
+  "expected_answer": "Excluded from the next exam date unless deregistered by the 3rd working day before or valid reason"
+ },
+ {
+  "id": "S7",
+  "question": "Wie lange hat der Prüfer Zeit, meine Prüfung zu beurteilen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    27,
+    28
+   ]
+  },
+  "expected_answer": "Unverzüglich, längstens innerhalb von vier Wochen"
+ },
+ {
+  "id": "S8",
+  "question": "How long does my supervisor have to grade my master's thesis?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    30
+   ]
+  },
+  "expected_answer": "Three months"
+ },
+ {
+  "id": "S9",
+  "question": "In welcher Zeit soll eine Masterarbeit bearbeitbar sein?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    29
+   ]
+  },
+  "expected_answer": "Innerhalb von sechs Monaten"
+ },
+ {
+  "id": "S10",
+  "question": "How many hours of work does one ECTS credit correspond to?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    40
+   ],
+   "cs_bachelor_guide_2023_de.pdf": [
+    5
+   ]
+  },
+  "expected_answer": "25 hours"
+ },
+ {
+  "id": "S11",
+  "question": "Wie viele ECTS-Punkte umfasst ein Bachelorstudium?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    40
+   ],
+   "cs_bachelor_guide_2023_de.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "180 ECTS (Ausnahme bis 240)"
+ },
+ {
+  "id": "S12",
+  "question": "In which months are exam dates offered in the winter semester?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    27
+   ]
+  },
+  "expected_answer": "Sept/Oct, Nov/Dec, Jan/Feb"
+ },
+ {
+  "id": "S13",
+  "question": "Wie lange muss die Anmeldefrist für Prüfungen mindestens sein?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    27
+   ]
+  },
+  "expected_answer": "Mindestens zwei Wochen"
+ },
+ {
+  "id": "S14",
+  "question": "For how long can I take a leave of absence because of a job or exceptional circumstances?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    40,
+    41
+   ]
+  },
+  "expected_answer": "Max. two semesters per case"
+ },
+ {
+  "id": "S15",
+  "question": "Darf eine Lehrveranstaltung auf Englisch abgehalten werden, wenn das Curriculum das nicht vorsieht?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    40
+   ]
+  },
+  "expected_answer": "Ja, mit Zustimmung des Vizerektors; beurteilt wird der Stoff, nicht die Sprache"
+ },
+ {
+  "id": "S16",
+  "question": "How long is one teaching unit and how many weeks does a semester have?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    40
+   ]
+  },
+  "expected_answer": "45 minutes; usually 15, at least 14 weeks"
+ },
+ {
+  "id": "A1",
+  "question": "Wie wird die Vorrangzahl bei der LVA-Zuteilung berechnet?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    1
+   ]
+  },
+  "expected_answer": "5 * Wartebonus + Teilzeitbonus + 2 * Zufallszahl"
+ },
+ {
+  "id": "A2",
+  "question": "How is the priority number for course allocation calculated?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    1
+   ]
+  },
+  "expected_answer": "5 x waiting bonus + part-time bonus + 2 x random number"
+ },
+ {
+  "id": "A3",
+  "question": "Bis wann muss ich mich von einer Lehrveranstaltung abmelden?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    6
+   ]
+  },
+  "expected_answer": "Vor dem ersten Termin (oder Verzicht beim ersten Termin); Curriculum kann spätere Frist festlegen"
+ },
+ {
+  "id": "A4",
+  "question": "Until when can I deregister from a course without being ranked lower later?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    6
+   ]
+  },
+  "expected_answer": "Before the first session (or waiver at the first session)"
+ },
+ {
+  "id": "A5",
+  "question": "How long is the main course registration period?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    2
+   ],
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    13
+   ]
+  },
+  "expected_answer": "At least two weeks, before the semester (WS 26/27: 8-25 Sept 2026)"
+ },
+ {
+  "id": "A6",
+  "question": "Was passiert mit meinem Wartebonus, wenn ich eine Lehrveranstaltung ohne wichtigen Grund abbreche?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    1
+   ]
+  },
+  "expected_answer": "Bonus für restliches Semester und Folgesemester auf 0, danach wieder 1"
+ },
+ {
+  "id": "H1",
+  "question": "Darf ich meinen Hund mit auf den Campus nehmen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "hausordnung_2026.pdf": [
+    8,
+    11,
+    14
+   ]
+  },
+  "expected_answer": "Nein, außer Blinden- und Partnerhunde (ärztliche Bestätigung)"
+ },
+ {
+  "id": "H2",
+  "question": "Can I bring my dog to campus?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "hausordnung_2026.pdf": [
+    8,
+    11,
+    14
+   ]
+  },
+  "expected_answer": "No, except guide and partner dogs (medical confirmation)"
+ },
+ {
+  "id": "H3",
+  "question": "What are the opening hours of the university buildings?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "hausordnung_2026.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "Mon-Fri 6:00-22:30, Sat 6:00-19:00"
+ },
+ {
+  "id": "H4",
+  "question": "Wo darf ich an der JKU Plakate aufhängen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "hausordnung_2026.pdf": [
+    5
+   ]
+  },
+  "expected_answer": "Nur an dafür bestimmten Anschlagflächen; freie Flächen brauchen Vidierung durch das Veranstaltungsmanagement"
+ },
+ {
+  "id": "H5",
+  "question": "Darf ich am Campus rauchen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "hausordnung_2026.pdf": [
+    8
+   ],
+   "benuetzungsordnung_bibliothek.pdf": [
+    2
+   ],
+   "parkordnung_2026.pdf": [
+    2
+   ]
+  },
+  "expected_answer": "Nur in Raucherzonen"
+ },
+ {
+  "id": "P1",
+  "question": "Was kostet das Parkticket für Studierende?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_kostenblatt_2026.pdf": [
+    1
+   ]
+  },
+  "expected_answer": "195 Euro pro Semester"
+ },
+ {
+  "id": "P2",
+  "question": "How much does student parking cost per semester?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_kostenblatt_2026.pdf": [
+    1
+   ]
+  },
+  "expected_answer": "EUR 195 per semester"
+ },
+ {
+  "id": "P3",
+  "question": "How much is a day ticket for parking at JKU?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_kostenblatt_2026.pdf": [
+    1
+   ]
+  },
+  "expected_answer": "EUR 5.70 (Science Park garage EUR 8.00)"
+ },
+ {
+  "id": "P4",
+  "question": "Darf ich im Parkhaus mit dem Fahrrad fahren?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_2026.pdf": [
+    2
+   ]
+  },
+  "expected_answer": "Nein, Radfahren im Parkhaus und in der Tiefgarage ist verboten"
+ },
+ {
+  "id": "P5",
+  "question": "How long is video footage from the parking areas stored?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_2026.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "72 hours"
+ },
+ {
+  "id": "P6",
+  "question": "Was passiert, wenn mein Auto zwei Parkplätze belegt?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_2026.pdf": [
+    2
+   ]
+  },
+  "expected_answer": "Zweiter Stellplatz wird zum Tagestarif verrechnet"
+ },
+ {
+  "id": "P7",
+  "question": "Who do I contact if I damage something in the parking area?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_2026.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "Info Desk Kepler Hall, parkplatz@jku.at, +43 732 2468 9999"
+ },
+ {
+  "id": "B1",
+  "question": "Wie lange darf ich ein Buch aus der Bibliothek ausleihen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    5
+   ]
+  },
+  "expected_answer": "Steht nicht als Zahl drin: Entlehnfristen gesondert geregelt, online einsehbar"
+ },
+ {
+  "id": "B2",
+  "question": "How long can I borrow a library book?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    5
+   ]
+  },
+  "expected_answer": "No number given: loan periods are set separately and published online"
+ },
+ {
+  "id": "B3",
+  "question": "How much do I pay if I return a library book late?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    6
+   ]
+  },
+  "expected_answer": "EUR 2/4/6 per reminder plus EUR 0.20 per item per day"
+ },
+ {
+  "id": "B4",
+  "question": "Muss ich einen Ausweis mitnehmen, wenn ich in die Bibliothek gehe?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    2
+   ]
+  },
+  "expected_answer": "Ja, Lichtbildausweis"
+ },
+ {
+  "id": "B5",
+  "question": "Darf ich in Büchern der Bibliothek etwas unterstreichen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "Nein, Markieren/Unterstreichen ist verboten"
+ },
+ {
+  "id": "B6",
+  "question": "Can I play games on the library computers?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "No, only for study and research"
+ },
+ {
+  "id": "K1",
+  "question": "Wie melde ich mich im KUSSS von einer Prüfung ab?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "kusss_lva_pruefungsanmeldung.pdf": [
+    5
+   ]
+  },
+  "expected_answer": "Menüpunkt Prüfungen, Liste am Seitenende, abmelden solange Abmeldefrist läuft"
+ },
+ {
+  "id": "K2",
+  "question": "I'm not listed as a participant of a course. How can I register for its exam in KUSSS?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "kusss_lva_pruefungsanmeldung.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "Use the exam search in the 'Prüfungen' menu"
+ },
+ {
+  "id": "K3",
+  "question": "Wann bekomme ich wegen einer Terminüberschneidung keinen LVA-Platz?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "kusss_terminkollision.pdf": [
+    2
+   ],
+   "anmeldeverordnung.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "Bei Überschneidung von mehr als 6 Einheiten (270 min) oder mehr als 4 Terminen"
+ },
+ {
+  "id": "K4",
+  "question": "Does the KUSSS prerequisite check include the StEOP?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "kusss_voraussetzungspruefung.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "No, StEOP is not part of the check; see 'Meine StEOP'"
+ },
+ {
+  "id": "K5",
+  "question": "Which semester is an exam assigned to in KUSSS if it takes place in a later semester?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "kusss_lva_pruefungsanmeldung.pdf": [
+    2
+   ]
+  },
+  "expected_answer": "The semester in which the course was held"
+ },
+ {
+  "id": "AI1",
+  "question": "What is the StEOP and how do I complete it?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    29
+   ]
+  },
+  "expected_answer": "Introductory phase; at least 9 ECTS from the StEOP pool"
+ },
+ {
+  "id": "AI2",
+  "question": "Wie viele ECTS muss ich für die StEOP im AI-Bachelor sammeln?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    29
+   ]
+  },
+  "expected_answer": "Mindestens 9 ECTS"
+ },
+ {
+  "id": "AI3",
+  "question": "How many ECTS of free electives do I need in the AI bachelor, and where can I take them?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    34
+   ]
+  },
+  "expected_answer": "9 ECTS, any course at JKU or another EU university"
+ },
+ {
+  "id": "AI4",
+  "question": "How do I find a topic for my bachelor thesis?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    17
+   ]
+  },
+  "expected_answer": "Institute websites, lecturers, own proposal, info events, ÖH thesis exchange"
+ },
+ {
+  "id": "AI5",
+  "question": "How do I sign up for the AI mentoring program?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    30
+   ]
+  },
+  "expected_answer": "Choose a mentor in the first KV Current Topics in AI lesson, join group on Moodle"
+ },
+ {
+  "id": "AI6",
+  "question": "Wie melde ich mich für das AI-Mentoring an?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    30
+   ]
+  },
+  "expected_answer": "Mentor in der ersten Einheit von KV Current Topics in AI wählen, Gruppe auf Moodle beitreten"
+ },
+ {
+  "id": "AI7",
+  "question": "How much does a replacement JKU Card cost?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    14
+   ]
+  },
+  "expected_answer": "EUR 15"
+ },
+ {
+  "id": "AI8",
+  "question": "When is course registration for the winter semester 2026/27?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    13
+   ]
+  },
+  "expected_answer": "8-25 Sept 2026"
+ },
+ {
+  "id": "AI9",
+  "question": "Wann sind die Weihnachtsferien im Wintersemester 2026/27?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    13
+   ]
+  },
+  "expected_answer": "23.12.2026-6.1.2027 (Achtung: Informatik-Leitfaden hat alte Daten 2025/26)"
+ },
+ {
+  "id": "AI10",
+  "question": "Should I start the AI bachelor in the summer semester?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    33
+   ]
+  },
+  "expected_answer": "Not recommended; follow 2nd-semester plan if you must"
+ },
+ {
+  "id": "AI11",
+  "question": "Can I study AI at JKU via distance learning?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    39
+   ]
+  },
+  "expected_answer": "Yes, all mandatory courses have a distance variant; must visit Linz at least once to enroll"
+ },
+ {
+  "id": "AI12",
+  "question": "Wo ist das TNF-Kammerl?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    8
+   ],
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    8
+   ]
+  },
+  "expected_answer": "Kepler Gebäude, gegenüber Sparkasse, Raum HT 021E"
+ },
+ {
+  "id": "AI13",
+  "question": "When and where does the AI Cafe take place?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    46
+   ]
+  },
+  "expected_answer": "Weekly in the TNF-Kammerl during the semester; times on the website"
+ },
+ {
+  "id": "AI14",
+  "question": "When do USI sports courses start in the winter semester?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    25
+   ]
+  },
+  "expected_answer": "October 1, registration from mid-September"
+ },
+ {
+  "id": "AI15",
+  "question": "How long is the AI master's program?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    36
+   ],
+   "flyer_master_ai.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "4 semesters, 120 ECTS"
+ },
+ {
+  "id": "AI16",
+  "question": "How long is the AI master's and what language is it taught in?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "flyer_master_ai.pdf": [
+    3
+   ],
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    36
+   ]
+  },
+  "expected_answer": "4 semesters, English (B2)"
+ },
+ {
+  "id": "AI17",
+  "question": "Welches Englischniveau brauche ich für den AI-Master?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "flyer_master_ai.pdf": [
+    3
+   ]
+  },
+  "expected_answer": "B2"
+ },
+ {
+  "id": "I1",
+  "question": "Wo finde ich meine verlorene JKU Card?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    13
+   ],
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    12
+   ]
+  },
+  "expected_answer": "Beim Portier (Fundbüro), Erdgeschoss Kopfgebäude"
+ },
+ {
+  "id": "I2",
+  "question": "When am I allowed to take master's courses during my bachelor?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    19
+   ],
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    17
+   ],
+   "satzung_studienrecht_2026.pdf": [
+    18
+   ]
+  },
+  "expected_answer": "After 150 ECTS"
+ },
+ {
+  "id": "I3",
+  "question": "Wie wird die Gesamtnote eines Fachs im Bachelorzeugnis berechnet?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    19
+   ]
+  },
+  "expected_answer": "ECTS-gewichteter Schnitt, ab .5 aufrunden"
+ },
+ {
+  "id": "I4",
+  "question": "Bietet die ÖH einen Plagiatscheck an?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    23
+   ]
+  },
+  "expected_answer": "Ja, kostenlos"
+ },
+ {
+  "id": "I5",
+  "question": "How do I get access to the 24-hour study zone?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    14
+   ],
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    13,
+    15
+   ]
+  },
+  "expected_answer": "Have the JKU Card enabled (Service Desk / library)"
+ },
+ {
+  "id": "C1",
+  "question": "Wie viele Semester dauert das Bachelorstudium Informatik?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "cs_bachelor_guide_2023_de.pdf": [
+    4
+   ],
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    32
+   ]
+  },
+  "expected_answer": "6 Semester, 180 ECTS"
+ },
+ {
+  "id": "C2",
+  "question": "How many ECTS is one semester hour (Sst) in the computer science bachelor?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "cs_bachelor_guide_2023_de.pdf": [
+    5
+   ]
+  },
+  "expected_answer": "1.5 ECTS"
+ },
+ {
+  "id": "C3",
+  "question": "In welcher Lehrveranstaltung schreibt man die Bachelorarbeit in Informatik?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "cs_bachelor_guide_2023_de.pdf": [
+    9
+   ]
+  },
+  "expected_answer": "Im Projektpraktikum (5 Sst, 7,5 ECTS)"
+ },
+ {
+  "id": "U1",
+  "question": "Who won the Champions League in 2026?",
+  "lang": "en",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U2",
+  "question": "Wie lautet das WLAN-Passwort der JKU?",
+  "lang": "de",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U3",
+  "question": "What is the JKU WiFi password?",
+  "lang": "en",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U4",
+  "question": "Was gibt es heute in der Mensa zu essen?",
+  "lang": "de",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U5",
+  "question": "How much does a room in a student dorm cost per month?",
+  "lang": "en",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U6",
+  "question": "Welche Stipendien kann ich an der JKU beantragen?",
+  "lang": "de",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U7",
+  "question": "How do I apply for an Erasmus semester abroad?",
+  "lang": "en",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U8",
+  "question": "Wie hoch ist der ÖH-Beitrag in Euro?",
+  "lang": "de",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U9",
+  "question": "What will the weather be like in Linz tomorrow?",
+  "lang": "en",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "U10",
+  "question": "Wie viel verdient ein Professor an der JKU?",
+  "lang": "de",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ }
+]

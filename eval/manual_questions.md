@@ -19,3 +19,30 @@ These are the seed of the real eval set (Phase 3), so keep your notes.
 | 10 | Wie lautet das WLAN-Passwort der JKU? | Should say the documents don't contain this (the guides may explain eduroam login, but there's no password) | — | | | Plausible but not answerable |
 
 Cross-language bonus: ask #3 in German ("Was ist die StEOP?") and #1 in English. Does retrieval still find the right page?
+
+## English questions
+
+### English question → English document (should be easy)
+
+| # | Question | Expected answer | Where it is | Right page? | Correct? | Notes |
+|---|----------|-----------------|-------------|----|----|----|
+| E1 | How many ECTS of free electives do I need in the AI bachelor, and where can I take them? | 9 ECTS, any course at JKU or any other EU university | Bachelor_AI_Studienleitfaden.pdf, p. 34 | | | |
+| E2 | How do I find a topic for my bachelor thesis? | Thesis is supervised by an institute. Check institute websites or ask lecturers, you can propose your own topic, external (e.g. at a company) is possible but needs an institute to supervise. Also the ÖH thesis exchange | Bachelor_AI_Studienleitfaden.pdf, p. 17 | | | |
+| E3 | How do I sign up for the AI mentoring program? | Mentors introduce themselves in the first lesson of KV Current Topics in AI. Then join your mentor's group on that course's Moodle page. No joining after the deadline | Bachelor_AI_Studienleitfaden.pdf, p. 30 | | | |
+
+### English question → German document (cross-language, the interesting part)
+
+| # | Question | Expected answer | Where it is | Right page? | Correct? | Notes |
+|---|----------|-----------------|-------------|----|----|----|
+| E4 | How many times can I retake a failed exam? | 4 times. StEOP exams only 3. Last exam of the degree gets one extra try | satzung_studienrecht_2026.pdf, p. 29 | | | Compare with the German version's scores |
+| E5 | How much does student parking cost per semester? | €195 per semester | parkordnung_kostenblatt_2026.pdf, p. 1 | | | |
+| E6 | Can I bring my dog to campus? | No, except guide dogs and partner dogs (medical confirmation needed) | hausordnung_2026.pdf, p. 8 | | | |
+| E7 | Until when can I deregister from a course? | Before the first session (or by waiving at the first session). The curriculum can set a later deadline | anmeldeverordnung.pdf, p. 6 | | | |
+| E8 | How long can I borrow a library book? | **Trick:** no number in the docs. Loan periods are published separately online. Extension possible if nobody reserved it | benuetzungsordnung_bibliothek.pdf, p. 5 | | | Must NOT invent a number |
+
+### Not answerable
+
+| # | Question | Expected answer | Right? | Notes |
+|---|----------|-----------------|----|----|
+| E9 | What is the JKU WiFi password? | Documents don't contain this | | |
+| E10 | Who won the Champions League in 2026? | Documents don't contain this | | |

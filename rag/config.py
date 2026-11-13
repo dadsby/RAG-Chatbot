@@ -24,6 +24,7 @@ EMBEDDING_MODEL = "intfloat/multilingual-e5-base"   # was e5-small (baseline)
 CHUNK_WORDS = 300     # words per chunk
 OVERLAP_WORDS = 50    # words shared between neighbouring chunks, so a sentence cut
                       # at a chunk border still appears whole in one of them
+STRIP_HEADERS = True  # drop lines repeated on most pages of a PDF (page headers/footers)
 
 # Retrieval
 TOP_K = 5             # how many chunks to give the LLM
@@ -33,12 +34,33 @@ TOP_K = 5             # how many chunks to give the LLM
 # questions miss German documents. Costs one extra (short) LLM call per question.
 QUERY_TRANSLATION = True
 
+# Hybrid search: combine vector search (meaning) with BM25 keyword search (exact words
+# like "Vorrangzahl" or "Parkhaus"). The ranked lists are merged with Reciprocal Rank
+# Fusion (RRF): each chunk gets 1 / (RRF_K + rank) from every list it appears in.
+HYBRID_SEARCH = True
+RRF_K = 60
+
+# Reranker: a cross-encoder reads question + chunk *together* and scores how well the chunk
+# answers the question. Much more precise than vector similarity, but slower, so it only
+# re-sorts the best RERANK_CANDIDATES chunks from the search step.
+# bge-reranker-v2-m3 is multilingual (DE/EN) and strong. If it's too slow on your laptop,
+# try "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1" (smaller, faster, a bit less accurate).
+USE_RERANKER = True
+RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
+RERANK_CANDIDATES = 20
+
 
 @lru_cache(maxsize=1)
 def get_embedder():
     # Imported here because loading torch is slow; only pay for it when needed.
     from sentence_transformers import SentenceTransformer
     return SentenceTransformer(EMBEDDING_MODEL)
+
+
+@lru_cache(maxsize=1)
+def get_reranker():
+    from sentence_transformers import CrossEncoder
+    return CrossEncoder(RERANKER_MODEL, max_length=512)
 
 
 def embed_passages(texts: list[str]) -> list[list[float]]:
