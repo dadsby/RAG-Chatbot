@@ -13,3 +13,9 @@ venv/
 
 # Secrets
 .env
+
+# Local scratch (chat downloads, logs, editor settings)
+Claude outputs/
+*.log
+.vscode/
+.idea/
