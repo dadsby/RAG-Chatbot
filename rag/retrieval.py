@@ -12,6 +12,7 @@ Pipeline (each step can be switched on/off in rag/config.py):
 """
 
 import re
+import time
 from functools import lru_cache
 
 from rag import config
@@ -117,12 +118,15 @@ def rerank(questions: list[str], candidates: list[str]) -> list[tuple[str, float
 
 def retrieve(question: str, k: int = config.TOP_K, *, translate: bool | None = None,
              hybrid: bool | None = None, use_reranker: bool | None = None,
-             versions: list[str] | None = None) -> list[dict]:
+             versions: list[str] | None = None, timings: dict | None = None) -> list[dict]:
     """Return the top-k chunks as dicts: text, source, page, score.
 
     Options default to rag/config.py. `versions` lets you pass pre-computed question
     translations (the eval script caches them so experiments don't re-call the LLM).
+    If `timings` is a dict, it gets the milliseconds per step: translate, search, rerank.
     """
+    timings = {} if timings is None else timings
+    t0 = time.perf_counter()
     translate = config.QUERY_TRANSLATION if translate is None else translate
     hybrid = config.HYBRID_SEARCH if hybrid is None else hybrid
     use_reranker = config.USE_RERANKER if use_reranker is None else use_reranker
@@ -132,6 +136,7 @@ def retrieve(question: str, k: int = config.TOP_K, *, translate: bool | None = N
     elif not translate:
         versions = versions[:1]
 
+    t1 = time.perf_counter()
     pool = max(config.RERANK_CANDIDATES, k)
     lists = []
     for q in versions:
@@ -139,10 +144,14 @@ def retrieve(question: str, k: int = config.TOP_K, *, translate: bool | None = N
         if hybrid:
             lists.append(bm25_search(q, pool))
     ranked = lists[0] if len(lists) == 1 else rrf(lists)
+    t2 = time.perf_counter()
 
     if use_reranker:
         rerank_queries = versions if config.RERANK_ALL_VERSIONS else [question]
         ranked = rerank(rerank_queries, [cid for cid, _ in ranked[:config.RERANK_CANDIDATES]])
+
+    t3 = time.perf_counter()
+    timings.update(translate_ms=1000 * (t1 - t0), search_ms=1000 * (t2 - t1), rerank_ms=1000 * (t3 - t2))
 
     chunks = corpus()["chunks"]
     return [{**chunks[cid], "score": score} for cid, score in ranked[:k]]

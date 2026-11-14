@@ -54,6 +54,11 @@ RERANK_CANDIDATES = 40   # was 20; raised so translated question versions don't 
 # prefers English chunks. Costs ~3x more reranker work.
 RERANK_ALL_VERSIONS = True
 
+# Refuse early: if even the best chunk gets a reranker score below this, answer "not in the
+# documents" without calling the LLM. 0.024 was the best cut-off on the 80-question eval set
+# (94% correct answer/refuse decisions). Set to None to always ask the LLM.
+REFUSAL_THRESHOLD = 0.024
+
 
 @lru_cache(maxsize=1)
 def get_embedder():

@@ -1,0 +1,386 @@
+{
+ "full": {
+  "rows": [
+   {
+    "id": "HO1",
+    "lang": "en",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.2,
+    "top_score": 0.2575782835483551,
+    "top5": [
+     "satzung_studienrecht_2026.pdf p40",
+     "Bachelor_AI_Studienleitfaden.pdf p16",
+     "Bachelor_AI_Studienleitfaden.pdf p16",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p5",
+     "Bachelor_AI_Studienleitfaden.pdf p36"
+    ],
+    "ms": 11203.776500013191
+   },
+   {
+    "id": "HO2",
+    "lang": "en",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.2,
+    "top_score": 0.13139596581459045,
+    "top5": [
+     "satzung_studienrecht_2026.pdf p27",
+     "satzung_studienrecht_2026.pdf p28",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p19",
+     "satzung_studienrecht_2026.pdf p28",
+     "Bachelor_AI_Studienleitfaden.pdf p18"
+    ],
+    "ms": 1621.1738999991212
+   },
+   {
+    "id": "HO3",
+    "lang": "de",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.2,
+    "top_score": 0.8918110132217407,
+    "top5": [
+     "anmeldeverordnung.pdf p2",
+     "anmeldeverordnung.pdf p1",
+     "Bachelor_AI_Studienleitfaden.pdf p15",
+     "Bachelor_AI_Studienleitfaden.pdf p22",
+     "anmeldeverordnung.pdf p1"
+    ],
+    "ms": 1691.9448999979068
+   },
+   {
+    "id": "HO4",
+    "lang": "en",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": false,
+    "hit5": false,
+    "rr": 0.0,
+    "p5": 0.0,
+    "top_score": 0.12667709589004517,
+    "top5": [
+     "Bachelor_AI_Studienleitfaden.pdf p15",
+     "Bachelor_AI_Studienleitfaden.pdf p13",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p14",
+     "anmeldeverordnung.pdf p5",
+     "satzung_studienrecht_2026.pdf p13"
+    ],
+    "ms": 863.4463000053074
+   },
+   {
+    "id": "HO5",
+    "lang": "en",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.4,
+    "top_score": 0.9969005584716797,
+    "top5": [
+     "hausordnung_2026.pdf p4",
+     "Bachelor_AI_Studienleitfaden.pdf p10",
+     "Bachelor_AI_Studienleitfaden.pdf p21",
+     "hausordnung_2026.pdf p4",
+     "hausordnung_2026.pdf p6"
+    ],
+    "ms": 1402.6810000068508
+   },
+   {
+    "id": "HO6",
+    "lang": "de",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": false,
+    "hit5": true,
+    "rr": 0.5,
+    "p5": 0.4,
+    "top_score": 0.9392480850219727,
+    "top5": [
+     "parkordnung_2026.pdf p2",
+     "hausordnung_2026.pdf p8",
+     "hausordnung_2026.pdf p8",
+     "hausordnung_2026.pdf p9",
+     "parkordnung_2026.pdf p1"
+    ],
+    "ms": 1019.2695000150707
+   },
+   {
+    "id": "HO7",
+    "lang": "en",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.4,
+    "top_score": 0.8253083229064941,
+    "top5": [
+     "parkordnung_2026.pdf p4",
+     "parkordnung_2026.pdf p3",
+     "parkordnung_2026.pdf p2",
+     "parkordnung_2026.pdf p3",
+     "parkordnung_2026.pdf p4"
+    ],
+    "ms": 1024.6665999875404
+   },
+   {
+    "id": "HO8",
+    "lang": "de",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.2,
+    "top_score": 0.9955142140388489,
+    "top5": [
+     "parkordnung_kostenblatt_2026.pdf p1",
+     "parkordnung_2026.pdf p3",
+     "parkordnung_2026.pdf p2",
+     "parkordnung_2026.pdf p4",
+     "parkordnung_2026.pdf p2"
+    ],
+    "ms": 1476.8571000022348
+   },
+   {
+    "id": "HO9",
+    "lang": "de",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.8,
+    "top_score": 0.9967396855354309,
+    "top5": [
+     "benuetzungsordnung_bibliothek.pdf p2",
+     "benuetzungsordnung_bibliothek.pdf p2",
+     "benuetzungsordnung_bibliothek.pdf p7",
+     "benuetzungsordnung_bibliothek.pdf p3",
+     "benuetzungsordnung_bibliothek.pdf p2"
+    ],
+    "ms": 1019.1078999778256
+   },
+   {
+    "id": "HO10",
+    "lang": "en",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.2,
+    "top_score": 0.04401864856481552,
+    "top5": [
+     "benuetzungsordnung_bibliothek.pdf p6",
+     "benuetzungsordnung_bibliothek.pdf p4",
+     "benuetzungsordnung_bibliothek.pdf p3",
+     "benuetzungsordnung_bibliothek.pdf p4",
+     "benuetzungsordnung_bibliothek.pdf p5"
+    ],
+    "ms": 1564.0236999897752
+   },
+   {
+    "id": "HO11",
+    "lang": "de",
+    "doc_lang": "de",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.4,
+    "top_score": 0.9775000214576721,
+    "top5": [
+     "kusss_lva_pruefungsanmeldung.pdf p2",
+     "kusss_lva_pruefungsanmeldung.pdf p2",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p15",
+     "kusss_voraussetzungspruefung.pdf p2",
+     "Bachelor_AI_Studienleitfaden.pdf p14"
+    ],
+    "ms": 1088.0600000091363
+   },
+   {
+    "id": "HO12",
+    "lang": "en",
+    "doc_lang": "de+en",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.4,
+    "top_score": 0.9888418912887573,
+    "top5": [
+     "Leitfaden_Bachelorstudium_Informatik.pdf p8",
+     "Bachelor_AI_Studienleitfaden.pdf p8",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p24",
+     "Bachelor_AI_Studienleitfaden.pdf p9",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p9"
+    ],
+    "ms": 1727.371499990113
+   },
+   {
+    "id": "HO13",
+    "lang": "de",
+    "doc_lang": "de+en",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.6,
+    "top_score": 0.9184802770614624,
+    "top5": [
+     "Leitfaden_Bachelorstudium_Informatik.pdf p20",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p20",
+     "Bachelor_AI_Studienleitfaden.pdf p20",
+     "Bachelor_AI_Studienleitfaden.pdf p30",
+     "Bachelor_AI_Studienleitfaden.pdf p33"
+    ],
+    "ms": 849.2622000048868
+   },
+   {
+    "id": "HO14",
+    "lang": "en",
+    "doc_lang": "en",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.4,
+    "top_score": 0.8985886573791504,
+    "top5": [
+     "Bachelor_AI_Studienleitfaden.pdf p38",
+     "Bachelor_AI_Studienleitfaden.pdf p46",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p39",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p18",
+     "Bachelor_AI_Studienleitfaden.pdf p39"
+    ],
+    "ms": 932.8464000136591
+   },
+   {
+    "id": "HO15",
+    "lang": "de",
+    "doc_lang": "de+en",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.4,
+    "top_score": 0.9973477125167847,
+    "top5": [
+     "Bachelor_AI_Studienleitfaden.pdf p23",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p23",
+     "Bachelor_AI_Studienleitfaden.pdf p24",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p5",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p22"
+    ],
+    "ms": 1366.045100003248
+   },
+   {
+    "id": "HO16",
+    "lang": "en",
+    "doc_lang": "en",
+    "answerable": true,
+    "hit1": true,
+    "hit5": true,
+    "rr": 1.0,
+    "p5": 0.8,
+    "top_score": 0.76082843542099,
+    "top5": [
+     "Bachelor_AI_Studienleitfaden.pdf p40",
+     "flyer_master_ai.pdf p2",
+     "flyer_master_ai.pdf p3",
+     "Bachelor_AI_Studienleitfaden.pdf p39",
+     "Bachelor_AI_Studienleitfaden.pdf p39"
+    ],
+    "ms": 1392.7066999895032
+   },
+   {
+    "id": "HU1",
+    "lang": "de",
+    "doc_lang": null,
+    "answerable": false,
+    "hit1": false,
+    "hit5": false,
+    "rr": 0.0,
+    "p5": 0.0,
+    "top_score": 0.13050688803195953,
+    "top5": [
+     "parkordnung_kostenblatt_2026.pdf p1",
+     "parkordnung_kostenblatt_2026.pdf p1",
+     "Bachelor_AI_Studienleitfaden.pdf p28",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p15",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p28"
+    ],
+    "ms": 1593.9840000064578
+   },
+   {
+    "id": "HU2",
+    "lang": "en",
+    "doc_lang": null,
+    "answerable": false,
+    "hit1": false,
+    "hit5": false,
+    "rr": 0.0,
+    "p5": 0.0,
+    "top_score": 0.9540517926216125,
+    "top5": [
+     "Bachelor_AI_Studienleitfaden.pdf p13",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p14",
+     "satzung_studienrecht_2026.pdf p53",
+     "Bachelor_AI_Studienleitfaden.pdf p16",
+     "Bachelor_AI_Studienleitfaden.pdf p33"
+    ],
+    "ms": 1278.4773999883328
+   },
+   {
+    "id": "HU3",
+    "lang": "de",
+    "doc_lang": null,
+    "answerable": false,
+    "hit1": false,
+    "hit5": false,
+    "rr": 0.0,
+    "p5": 0.0,
+    "top_score": 0.7550956010818481,
+    "top5": [
+     "satzung_studienrecht_2026.pdf p31",
+     "satzung_studienrecht_2026.pdf p19",
+     "satzung_studienrecht_2026.pdf p31",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p5",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p13"
+    ],
+    "ms": 970.4135000065435
+   },
+   {
+    "id": "HU4",
+    "lang": "en",
+    "doc_lang": null,
+    "answerable": false,
+    "hit1": false,
+    "hit5": false,
+    "rr": 0.0,
+    "p5": 0.0,
+    "top_score": 0.055310655385255814,
+    "top5": [
+     "Bachelor_AI_Studienleitfaden.pdf p40",
+     "Leitfaden_Bachelorstudium_Informatik.pdf p11",
+     "Bachelor_AI_Studienleitfaden.pdf p11",
+     "Bachelor_AI_Studienleitfaden.pdf p14",
+     "Bachelor_AI_Studienleitfaden.pdf p8"
+    ],
+    "ms": 1022.0070999930613
+   }
+  ]
+ }
+}

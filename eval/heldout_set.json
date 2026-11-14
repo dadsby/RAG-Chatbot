@@ -1,0 +1,263 @@
+[
+ {
+  "id": "HO1",
+  "question": "How long does a doctoral program take at minimum?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    40
+   ]
+  },
+  "expected_answer": "At least three years"
+ },
+ {
+  "id": "HO2",
+  "question": "If an exam senate can't agree on a grade, how is the grade calculated?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "satzung_studienrecht_2026.pdf": [
+    27
+   ]
+  },
+  "expected_answer": "Average of the members' proposed grades, rounded; results above x.5 are rounded up"
+ },
+ {
+  "id": "HO3",
+  "question": "Welchen Wartebonus bekommen Austauschstudierende bei ihrer ersten Anmeldung?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    2
+   ]
+  },
+  "expected_answer": "2"
+ },
+ {
+  "id": "HO4",
+  "question": "What results can my course registration have after the allocation?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "anmeldeverordnung.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "Fixed place, waiting list with a rank, or no allocation"
+ },
+ {
+  "id": "HO5",
+  "question": "Do the regular building opening hours also apply to Schloss Auhof?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "hausordnung_2026.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "No, Schloss Auhof is excluded"
+ },
+ {
+  "id": "HO6",
+  "question": "Darf ich mit dem Auto über das Universitätsgelände fahren?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "hausordnung_2026.pdf": [
+    8
+   ]
+  },
+  "expected_answer": "Nein, außer notwendige Zustelldienste, Radfahrer und KFZ mit Sondergenehmigung"
+ },
+ {
+  "id": "HO7",
+  "question": "Do I have to pay for parking on weekends and public holidays?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_2026.pdf": [
+    4
+   ]
+  },
+  "expected_answer": "Yes, fees apply Monday to Sunday and on holidays"
+ },
+ {
+  "id": "HO8",
+  "question": "Was kostet ein Ausfahrtsticket am JKU-Parkplatz?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "parkordnung_kostenblatt_2026.pdf": [
+    1
+   ]
+  },
+  "expected_answer": "8,50 Euro"
+ },
+ {
+  "id": "HO9",
+  "question": "Darf ich meine Tasche in den Lesesaal der Bibliothek mitnehmen?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    2,
+    7
+   ]
+  },
+  "expected_answer": "Nein, Taschen in die Garderobe bzw. versperrbare Schränke"
+ },
+ {
+  "id": "HO10",
+  "question": "From how much unpaid debt am I blocked from borrowing library books?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "benuetzungsordnung_bibliothek.pdf": [
+    6
+   ]
+  },
+  "expected_answer": "More than EUR 20"
+ },
+ {
+  "id": "HO11",
+  "question": "Was bedeutet ein blaues Symbol in der Prüfungsspalte unter 'Meine LVAs' im KUSSS?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de",
+  "gold": {
+   "kusss_lva_pruefungsanmeldung.pdf": [
+    2
+   ]
+  },
+  "expected_answer": "Die Anmeldefrist läuft gerade"
+ },
+ {
+  "id": "HO12",
+  "question": "Which email can I write to if I can't visit the TNF-Kammerl in person?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    6,
+    8
+   ],
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    7,
+    8
+   ]
+  },
+  "expected_answer": "tnf@oeh.jku.at (or your study representation)"
+ },
+ {
+  "id": "HO13",
+  "question": "Gibt es einen Python-Vorbereitungskurs für AI-Studierende?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    20
+   ],
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    20
+   ]
+  },
+  "expected_answer": "Ja, Python Programming for Artificial Intelligence"
+ },
+ {
+  "id": "HO14",
+  "question": "When is the Bachelor Info Evening and what happens there?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    38,
+    46
+   ]
+  },
+  "expected_answer": "Once a year in January, online (Zoom); institutes present topics for seminars, practical work and theses"
+ },
+ {
+  "id": "HO15",
+  "question": "Wobei hilft das Institut Integriert Studieren?",
+  "lang": "de",
+  "answerable": true,
+  "doc_lang": "de+en",
+  "gold": {
+   "Leitfaden_Bachelorstudium_Informatik.pdf": [
+    23
+   ],
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    23
+   ]
+  },
+  "expected_answer": "Support für Studierende mit Behinderung, chronischen Krankheiten, Neurodiversität (z.B. mehr Prüfungszeit)"
+ },
+ {
+  "id": "HO16",
+  "question": "Where besides Linz can I study the AI master's program?",
+  "lang": "en",
+  "answerable": true,
+  "doc_lang": "en",
+  "gold": {
+   "flyer_master_ai.pdf": [
+    3
+   ],
+   "Bachelor_AI_Studienleitfaden.pdf": [
+    39,
+    40
+   ]
+  },
+  "expected_answer": "Vienna and Bregenz (distance learning centers)"
+ },
+ {
+  "id": "HU1",
+  "question": "Was kostet ein Semesterticket für die Öffis der Linz AG?",
+  "lang": "de",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "HU2",
+  "question": "When does the winter semester 2027/28 start?",
+  "lang": "en",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "HU3",
+  "question": "Gibt es an der JKU eine Kinderbetreuung für Studierende?",
+  "lang": "de",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ },
+ {
+  "id": "HU4",
+  "question": "How many seats does lecture hall 1 have?",
+  "lang": "en",
+  "answerable": false,
+  "doc_lang": null,
+  "gold": {},
+  "expected_answer": null
+ }
+]

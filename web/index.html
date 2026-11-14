@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fundstelle</title>
+  <meta name="description" content="Ask questions about your PDF documents and get answers with the exact page they come from.">
+  <link rel="preload" href="vendor/geist/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="vendor/phosphor/style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved theme + language before first paint (no flash).
+    try {
+      const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t;
+      const l = localStorage.getItem("lang") || ((navigator.language || "en").toLowerCase().startsWith("de") ? "de" : "en");
+      document.documentElement.lang = l;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="library-toggle" aria-controls="library" aria-expanded="false" data-i18n-aria="showLibrary">
+        <i class="ph ph-books" aria-hidden="true"></i>
+      </button>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
+        <span class="brand-name">Fundstelle</span>
+      </div>
+      <div class="topbar-right">
+        <span class="status" id="status" aria-live="polite"></span>
+        <div class="lang-switch" role="radiogroup" data-i18n-aria="language" id="lang-switch">
+          <span class="lang-thumb" aria-hidden="true"></span>
+          <button type="button" role="radio" data-lang="en" aria-checked="true">EN</button>
+          <button type="button" role="radio" data-lang="de" aria-checked="false">DE</button>
+        </div>
+        <button class="icon-btn" id="theme-toggle" data-i18n-aria="switchTheme">
+          <i class="ph ph-moon theme-icon-dark" aria-hidden="true"></i>
+          <i class="ph ph-sun theme-icon-light" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <aside class="library" id="library" data-i18n-aria="library">
+      <div class="library-head">
+        <h2 data-i18n="library"></h2>
+        <span class="count" id="doc-count"></span>
+      </div>
+
+      <label class="dropzone" id="dropzone" for="file-input">
+        <input type="file" id="file-input" accept="application/pdf,.pdf" class="sr-only">
+        <i class="ph ph-file-arrow-up" aria-hidden="true"></i>
+        <span class="dropzone-title" data-i18n="addPdf"></span>
+        <span class="dropzone-hint" data-i18n="dropHint"></span>
+      </label>
+      <p class="upload-msg" id="upload-msg" role="status" hidden></p>
+
+      <ul class="doc-list" id="doc-list" aria-busy="true">
+        <li class="doc-skeleton"></li><li class="doc-skeleton"></li><li class="doc-skeleton"></li>
+      </ul>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main class="chat" id="chat">
+      <div class="thread" id="thread" aria-live="polite">
+        <section class="empty" id="empty">
+          <h1 data-i18n-html="heroTitle"></h1>
+          <p data-i18n="heroText"></p>
+          <div class="examples" id="examples"></div>
+        </section>
+      </div>
+
+      <form class="composer" id="composer">
+        <label for="question" class="sr-only" data-i18n="yourQuestion"></label>
+        <div class="composer-box">
+          <textarea id="question" rows="1" maxlength="500" data-i18n-placeholder="placeholder" autocomplete="off"></textarea>
+          <button class="send" id="send" type="submit" data-i18n-aria="ask" disabled>
+            <i class="ph ph-arrow-up" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p class="composer-hint" data-i18n="composerHint"></p>
+      </form>
+    </main>
+
+    <aside class="panel" id="panel" data-i18n-aria="source" hidden>
+      <div class="panel-head">
+        <div>
+          <p class="panel-file" id="panel-file"></p>
+          <p class="panel-meta" id="panel-meta"></p>
+        </div>
+        <button class="icon-btn" id="panel-close" data-i18n-aria="closeSource">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="panel-body">
+        <p class="panel-label" data-i18n="passageLabel"></p>
+        <blockquote class="panel-text" id="panel-text"></blockquote>
+      </div>
+      <div class="panel-foot">
+        <a class="btn" id="panel-open" target="_blank" rel="noopener">
+          <i class="ph ph-arrow-square-out" aria-hidden="true"></i><span data-i18n="openPdf"></span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

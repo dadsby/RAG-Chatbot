@@ -3,8 +3,9 @@
 Run from the project root:
     python -m eval.run_retrieval                       # all configurations
     python -m eval.run_retrieval --configs dense full  # only some
+    python -m eval.run_retrieval --set heldout --configs full   # the 20 held-out questions
 
-Uses eval/eval_set.json (questions + the pages that contain the answer). No LLM answers are
+Uses eval/eval_set.json (or eval/heldout_set.json with --set heldout): questions + the pages that contain the answer. No LLM answers are
 generated here, only the search is tested, so it's fast and fully automatic.
 Translations are cached in eval/cache/translations.json, so the LLM is only asked once per question.
 
@@ -25,10 +26,10 @@ from dotenv import load_dotenv
 
 from rag import config
 from rag.config import ROOT, get_embedder, get_reranker
-from rag.retrieval import query_versions, retrieve
+from rag.retrieval import retrieve
 
-EVAL_SET = ROOT / "eval" / "eval_set.json"
-CACHE = ROOT / "eval" / "cache" / "translations.json"
+from eval.common import SETS, is_relevant, load_set, load_translations
+
 K = 5
 DEPTH = 10  # how deep we look for MRR
 
@@ -41,24 +42,6 @@ CONFIGS = {
     "hybrid+rerank":    (False, True,  True),
     "full":             (True,  True,  True),
 }
-
-
-def load_translations(questions: list[dict]) -> dict[str, list[str]]:
-    cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
-    missing = [q for q in questions if q["question"] not in cache]
-    if missing:
-        print(f"Translating {len(missing)} questions with the LLM (cached for next time)...")
-        for i, q in enumerate(missing, 1):
-            cache[q["question"]] = query_versions(q["question"], translate=True)
-            print(f"  {i}/{len(missing)}", end="\r")
-        CACHE.parent.mkdir(parents=True, exist_ok=True)
-        CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
-        print()
-    return cache
-
-
-def is_relevant(hit: dict, gold: dict) -> bool:
-    return hit["page"] in gold.get(hit["source"], [])
 
 
 def evaluate(questions, translations, translate, hybrid, rerank) -> dict:
@@ -110,9 +93,10 @@ def main() -> None:
     load_dotenv(ROOT / ".env")
     parser = argparse.ArgumentParser()
     parser.add_argument("--configs", nargs="*", default=list(CONFIGS), choices=list(CONFIGS))
+    parser.add_argument("--set", default="main", choices=list(SETS))
     args = parser.parse_args()
 
-    questions = json.loads(EVAL_SET.read_text(encoding="utf-8"))
+    questions = load_set(args.set)
     get_embedder()
     if any(CONFIGS[c][2] for c in args.configs):
         get_reranker()
@@ -124,7 +108,7 @@ def main() -> None:
         results[name] = evaluate(questions, translations, *CONFIGS[name])
 
     # ---------- report
-    out = [f"# Retrieval eval {datetime.now():%Y-%m-%d %H:%M}\n",
+    out = [f"# Retrieval eval {datetime.now():%Y-%m-%d %H:%M} ({args.set} set)\n",
            f"{len(questions)} questions ({sum(q['answerable'] for q in questions)} answerable). "
            f"Embedding: {config.EMBEDDING_MODEL}, reranker: {config.RERANKER_MODEL}, "
            f"chunks: {config.CHUNK_WORDS} words, header stripping: {config.STRIP_HEADERS}, k={K}.\n",
@@ -169,11 +153,12 @@ def main() -> None:
     stamp = f"{datetime.now():%Y-%m-%d_%H-%M}"
     out_dir = ROOT / "eval" / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / f"retrieval_{stamp}.md").write_text("\n".join(out) + "\n", encoding="utf-8")
-    (out_dir / f"retrieval_{stamp}.json").write_text(json.dumps(results, ensure_ascii=False, indent=1),
+    prefix = "retrieval" if args.set == "main" else f"retrieval_{args.set}"
+    (out_dir / f"{prefix}_{stamp}.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    (out_dir / f"{prefix}_{stamp}.json").write_text(json.dumps(results, ensure_ascii=False, indent=1),
                                                     encoding="utf-8")
     print("\n".join(out[3:3 + len(results) + 2]))
-    print(f"\nFull report: eval/results/retrieval_{stamp}.md")
+    print(f"\nFull report: eval/results/{prefix}_{stamp}.md")
 
 
 if __name__ == "__main__":

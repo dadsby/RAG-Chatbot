@@ -7,14 +7,13 @@ Output: eval/results/manual_<date-time>.md  (answer, retrieved pages, scores, ti
 Then compare each answer with the expected one in eval/manual_questions.md.
 """
 
-import time
 from datetime import datetime
 
 from dotenv import load_dotenv
 
-from rag.ask import build_context, generate, retrieve
 from rag import config
-from rag.config import ROOT, get_embedder
+from rag.answer import answer_question
+from rag.config import ROOT, get_embedder, get_reranker
 
 QUESTIONS = [
     # German
@@ -47,6 +46,8 @@ QUESTIONS = [
 def main() -> None:
     load_dotenv(ROOT / ".env")
     get_embedder()  # load once, not per question
+    if config.USE_RERANKER:
+        get_reranker()
 
     out_dir = ROOT / "eval" / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -54,22 +55,21 @@ def main() -> None:
 
     lines = [f"# Manual run {datetime.now():%Y-%m-%d %H:%M}\n",
              f"Embedding: {config.EMBEDDING_MODEL} | translation: {config.QUERY_TRANSLATION} | "
-             f"hybrid: {config.HYBRID_SEARCH} | reranker: {config.RERANKER_MODEL if config.USE_RERANKER else 'off'}\n"]
+             f"hybrid: {config.HYBRID_SEARCH} | reranker: {config.RERANKER_MODEL if config.USE_RERANKER else 'off'} | "
+             f"refusal threshold: {config.REFUSAL_THRESHOLD}\n"]
     for qid, question in QUESTIONS:
         print(f"[{qid}] {question}")
-        t0 = time.perf_counter()
-        hits = retrieve(question)
-        t1 = time.perf_counter()
-        answer, usage = generate(question, build_context(hits))
-        t2 = time.perf_counter()
-
+        r = answer_question(question)
         lines.append(f"## {qid}. {question}\n")
-        lines.append(answer + "\n")
+        lines.append(r["answer"] + "\n")
+        if r["refused_by"] == "threshold":
+            lines.append(f"_(refused without LLM: top score {r['top_score']:.3f})_\n")
         lines.append("Retrieved:")
-        for h in hits:
+        for h in r["hits"]:
             lines.append(f"- {h['score']:.3f}  {h['source']}, p. {h['page']}")
-        tokens = f", {usage.prompt_tokens} in / {usage.completion_tokens} out tokens" if usage else ""
-        lines.append(f"\nTime: retrieval {1000 * (t1 - t0):.0f} ms, LLM {1000 * (t2 - t1):.0f} ms{tokens}\n")
+        u = r["usage"]
+        tokens = f", {u.prompt_tokens} in / {u.completion_tokens} out tokens" if u else ""
+        lines.append(f"\nTime: retrieval {r['retrieval_ms']:.0f} ms, LLM {r['llm_ms']:.0f} ms{tokens}\n")
 
     out_file.write_text("\n".join(lines), encoding="utf-8")
     print(f"\nSaved to {out_file}")
